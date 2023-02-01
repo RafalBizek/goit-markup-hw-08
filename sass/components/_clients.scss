@@ -1,0 +1,38 @@
+.clients {
+  &__title {
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+  &__items {
+    display: flex;
+    gap: $spaceGap;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: 170px;
+    height: 90px;
+    border: 1px solid $iconsColor;
+    border-radius: 3px;
+    transition: $transition-clients;
+    &:hover,
+    &:focus {
+      cursor: pointer;
+      border: 1px solid $accentColor;
+    }
+  }
+  &__link {
+    display: block;
+    fill: $iconsColor;
+    transition: $transition-clients;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover,
+    &:focus {
+      fill: $accentColor;
+    }
+  }
+}

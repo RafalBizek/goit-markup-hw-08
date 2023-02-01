@@ -1,0 +1,46 @@
+.backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: $bgBackdrop;
+}
+.modal {
+  position: relative;
+  width: 528px;
+  min-height: 581px;
+  border-radius: 4px;
+  background-color: $primaryColor;
+  animation: modal-open 3s forwards;
+}
+@keyframes modal-open {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.is-hidden {
+  display: none;
+}
+.modal__close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: $primaryColor;
+  border-radius: 50px;
+  border: 1px solid $borderCloseModal;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    cursor: pointer;
+  }
+}

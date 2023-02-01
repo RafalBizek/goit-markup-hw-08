@@ -1,0 +1,78 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 0;
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+    display: flex;
+  }
+  &__menu-item:not(:last-child) {
+    margin-right: 46px;
+  }
+  &__menu-link {
+    font-weight: 500;
+    line-height: 1.17;
+    color: $secondaryColor;
+    text-transform: capitalize;
+    transition: $transition-nav;
+    position: relative;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
+  &__contact {
+    display: flex;
+    align-items: center;
+  }
+  &__contact-item:not(:last-child) {
+    margin-right: 50px;
+  }
+  &__contact-link {
+    font-weight: 500;
+    line-height: 1.17;
+    color: $textColor;
+    display: flex;
+    align-items: center;
+    transition: $transition-nav;
+    text-decoration: none;
+    &:hover,
+    &:focus {
+      color: $accentColor;
+    }
+  }
+  &__icon {
+    --color2: currentColor;
+    fill: var(--color2);
+    margin-right: 10px;
+  }
+  &__icon--phone {
+    --color6: currentColor;
+    fill: var(--color6);
+    margin-right: 10px;
+  }
+}
+//accent first part for logo
+.logo__primary-part {
+  color: $accentColor;
+  text-transform: capitalize;
+}
+//bottom border for header
+.header--border {
+  border-bottom: 1px solid $borderNavColor;
+}
+//nav element active
+.header__menu-link--active::after {
+  content: "";
+  width: 53px;
+  height: 4px;
+  display: block;
+  border-radius: 2px;
+  background-color: $accentColor;
+  position: absolute;
+  top: 48px;
+}

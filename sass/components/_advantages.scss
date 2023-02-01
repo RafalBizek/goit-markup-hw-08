@@ -1,0 +1,23 @@
+.advantages {
+  display: flex;
+  gap: $spaceGap;
+  flex-wrap: wrap;
+  padding-top: 94px;
+  &__item {
+    flex-basis: calc((100% - 3 * $spaceGap) / 4);
+  }
+  &__title {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.14;
+    color: var(--color-second);
+    text-transform: uppercase;
+    margin-bottom: 9px;
+  }
+  &__text {
+    line-height: 1.71;
+  }
+  &__icon {
+    margin-bottom: 30px;
+  }
+}
