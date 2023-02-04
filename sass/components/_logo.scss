@@ -5,13 +5,22 @@
   font-weight: 700;
   line-height: 1.38;
   color: $logoColor;
-}
-.logo-header {
-  margin-right: 93px;
+  &__primary-part {
+    color: $accentColor;
+    text-transform: capitalize;
+  }
+  @include tablet {
+    &-header {
+      margin-right: 83px;
+    }
+  }
+  @include desktop {
+    &-header {
+      margin-right: 93px;
+    }
+  }
 }
 .logo-footer {
-  padding-top: 60px;
-  margin-bottom: 20px;
   display: inline-block;
   color: $primaryColor;
 }

@@ -1,13 +1,8 @@
 .clients {
-  &__title {
-    &::first-letter {
-      text-transform: uppercase;
-    }
-  }
   &__items {
     display: flex;
-    gap: $spaceGap;
     flex-wrap: wrap;
+    gap: $spaceGap;
   }
   &__item {
     width: 170px;
@@ -15,6 +10,7 @@
     border: 1px solid $iconsColor;
     border-radius: 3px;
     transition: $transition-clients;
+    flex-basis: calc((100% - $spaceGap) / 2);
     &:hover,
     &:focus {
       cursor: pointer;
@@ -33,6 +29,18 @@
     &:hover,
     &:focus {
       fill: $accentColor;
+    }
+  }
+  @include tablet {
+    gap: $spaceGap;
+    &__item {
+      flex-basis: calc((100% - 2 * $spaceGap) / 3);
+      text-align: left;
+    }
+  }
+  @include desktop {
+    &__items {
+      flex-wrap: nowrap;
     }
   }
 }

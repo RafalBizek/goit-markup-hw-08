@@ -55,36 +55,51 @@
           </li>
           <li class="header__contact-item">
             <a class="header__contact-link" href="tel:+48111111111">
-              <svg class="header__icon--phone" width="10" height="16">
+              <svg class="header__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +48 111 111 111</a
             >
           </li>
         </ul>
+        <!-- mobile menu -->
+        <svg
+          class="header__menu-svg js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          width="40"
+          height="40"
+        >
+          <use href="images/icons.svg#icon-menu"></use>
+        </svg>
+        <!-- mobile menu -->
       </div>
     </header>
     <!--Main website content-->
     <main>
       <section class="headline section">
         <div class="container">
-          <h1 class="headline__title">
-            efektywne rozwiązania<br />
-            dla waszego biznesu
-          </h1>
-          <button class="headline__button" type="button" data-modal-open>
-            zamów usługę
-          </button>
+          <div class="headline__wrapper">
+            <h1 class="headline__title">
+              efektywne rozwiązania<br />
+              dla waszego biznesu
+            </h1>
+            <button class="headline__button" type="button" data-modal-open>
+              zamów usługę
+            </button>
+          </div>
         </div>
       </section>
       <!--Our advantages section -->
-      <section>
+      <section class="section">
         <div class="container">
           <ul class="advantages">
             <li class="advantages__item">
-              <svg class="advantages__icon" width="270" height="120">
-                <use href="./images/icons.svg#icon-antenna"></use>
-              </svg>
+              <div class="advantages__icon">
+                <svg width="70" height="70">
+                  <use href="./images/icons.svg#icon-antenna"></use>
+                </svg>
+              </div>
               <h3 class="advantages__title">lorem Ipsum</h3>
               <p class="advantages__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
@@ -93,9 +108,11 @@
               </p>
             </li>
             <li class="advantages__item">
-              <svg class="advantages__icon" width="270" height="120">
-                <use href="./images/icons.svg#icon-clock"></use>
-              </svg>
+              <div class="advantages__icon">
+                <svg width="70" height="70">
+                  <use href="./images/icons.svg#icon-clock"></use>
+                </svg>
+              </div>
               <h3 class="advantages__title">lorem Ipsum</h3>
               <p class="advantages__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
@@ -104,9 +121,11 @@
               </p>
             </li>
             <li class="advantages__item">
-              <svg class="advantages__icon" width="270" height="120">
-                <use href="./images/icons.svg#icon-diagram"></use>
-              </svg>
+              <div class="advantages__icon">
+                <svg width="70" height="70">
+                  <use href="./images/icons.svg#icon-diagram"></use>
+                </svg>
+              </div>
               <h3 class="advantages__title">lorem Ipsum</h3>
               <p class="advantages__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
@@ -115,9 +134,11 @@
               </p>
             </li>
             <li class="advantages__item">
-              <svg class="advantages__icon" width="270" height="120">
-                <use href="./images/icons.svg#icon-astronaut"></use>
-              </svg>
+              <div class="advantages__icon">
+                <svg width="70" height="70">
+                  <use href="./images/icons.svg#icon-astronaut"></use>
+                </svg>
+              </div>
               <h3 class="advantages__title">lorem Ipsum</h3>
               <p class="advantages__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
@@ -129,8 +150,8 @@
         </div>
       </section>
       <!--offer section -->
-      <section class="section">
-        <div class="container offer">
+      <section class="offer section">
+        <div class="container">
           <h2 class="section__header">czym się zajmujemy</h2>
           <ul class="offer__cards">
             <li class="offer__card">
@@ -175,12 +196,35 @@
           <h2 class="section__header">nasz zespół</h2>
           <ul class="team__cards">
             <li class="team__card">
-              <img
-                src="images/john-doe-memeber-of-our-team-1.jpg"
-                alt="our employee John Doe"
-                width="270"
-                height="260"
-              />
+              <picture class="team__img">
+                <source
+                  media="screen and
+                (max-width: 768px)"
+                  srcset="
+                    images/team/john-doe-memeber-of-our-team-1-mobile-1x.jpg,
+                    images/team/john-doe-memeber-of-our-team-1-mobile-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="screen and
+                (max-width: 1200px)"
+                  srcset="
+                    images/team/john-doe-memeber-of-our-team-1-tablet-1x.jpg,
+                    images/team/john-doe-memeber-of-our-team-1-tablet-2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    images/team/john-doe-memeber-of-our-team-1-desktop-1x.jpg,
+                    images/team/john-doe-memeber-of-our-team-1-desktop-2x.jpg 2x
+                  "
+                />
+                <img
+                  class="team__img-default"
+                  src="images/john-doe-memeber-of-our-team-1.jpg"
+                  alt="our employee John Doe"
+                />
+              </picture>
               <h3 class="team__title">john doe</h3>
               <p class="team__subtitle">product designer</p>
               <ul class="team__icons">
@@ -231,16 +275,39 @@
               </ul>
             </li>
             <li class="team__card">
-              <img
-                src="images/john-doe-memeber-of-our-team-2.jpg"
-                alt="our employee John Doe"
-                width="270"
-                height="260"
-              />
+              <picture class="team__img">
+                <source
+                  media="screen and
+                (max-width: 768px)"
+                  srcset="
+                    images/team/john-doe-memeber-of-our-team-2-mobile-1x.jpg,
+                    images/team/john-doe-memeber-of-our-team-2-mobile-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="screen and
+                (max-width: 1200px)"
+                  srcset="
+                    images/team/john-doe-memeber-of-our-team-2-tablet-1x.jpg,
+                    images/team/john-doe-memeber-of-our-team-2-tablet-2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    images/team/john-doe-memeber-of-our-team-2-desktop-1x.jpg,
+                    images/team/john-doe-memeber-of-our-team-2-desktop-2x.jpg 2x
+                  "
+                />
+                <img
+                  class="team__img-default"
+                  src="images/john-doe-memeber-of-our-team-2.jpg"
+                  alt="our employee John Doe"
+                />
+              </picture>
               <h3 class="team__title">john doe</h3>
               <p class="team__subtitle">frondend developer</p>
               <ul class="team__icons">
-                <li class="team__icon-item">
+                <li class="team__icon">
                   <a
                     href="https://www.instagram.com/"
                     target="_blank"
@@ -251,7 +318,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="team__icon-item">
+                <li class="team__icon">
                   <a
                     href="https://twitter.com/"
                     target="_blank"
@@ -262,7 +329,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="team__icon-item">
+                <li class="team__icon">
                   <a
                     href="https://facebook.com/"
                     target="_blank"
@@ -273,7 +340,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="team__icon-item">
+                <li class="team__icon">
                   <a
                     href="https://www.linkedin.com/"
                     target="_blank"
@@ -287,16 +354,39 @@
               </ul>
             </li>
             <li class="team__card">
-              <img
-                src="images/john-doe-memeber-of-our-team-3.jpg"
-                alt="our employee John Doe"
-                width="270"
-                height="260"
-              />
+              <picture class="team__img">
+                <source
+                  media="screen and
+                (max-width: 768px)"
+                  srcset="
+                    images/team/john-doe-memeber-of-our-team-3-mobile-1x.jpg,
+                    images/team/john-doe-memeber-of-our-team-3-mobile-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="screen and
+                (max-width: 1200px)"
+                  srcset="
+                    images/team/john-doe-memeber-of-our-team-3-tablet-1x.jpg,
+                    images/team/john-doe-memeber-of-our-team-3-tablet-2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    images/team/john-doe-memeber-of-our-team-3-desktop-1x.jpg,
+                    images/team/john-doe-memeber-of-our-team-3-desktop-2x.jpg 2x
+                  "
+                />
+                <img
+                  class="team__img-default"
+                  src="images/john-doe-memeber-of-our-team-3.jpg"
+                  alt="our employee John Doe"
+                />
+              </picture>
               <h3 class="team__title">john doe</h3>
               <p class="team__subtitle">marketing</p>
               <ul class="team__icons">
-                <li class="team__icon-item">
+                <li class="team__icon">
                   <a
                     href="https://www.instagram.com/"
                     target="_blank"
@@ -307,7 +397,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="team__icon-item">
+                <li class="team__icon">
                   <a
                     href="https://twitter.com/"
                     target="_blank"
@@ -318,7 +408,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="team__icon-item">
+                <li class="team__icon">
                   <a
                     href="https://facebook.com/"
                     target="_blank"
@@ -329,7 +419,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="team__icon-item">
+                <li class="team__icon">
                   <a
                     href="https://www.linkedin.com/"
                     target="_blank"
@@ -343,16 +433,39 @@
               </ul>
             </li>
             <li class="team__card">
-              <img
-                src="images/john-doe-memeber-of-our-team-4.jpg"
-                alt="our employee John Doe"
-                width="270"
-                height="260"
-              />
+              <picture class="team__img">
+                <source
+                  media="screen and
+                (max-width: 768px)"
+                  srcset="
+                    images/team/john-doe-memeber-of-our-team-4-mobile-1x.jpg,
+                    images/team/john-doe-memeber-of-our-team-4-mobile-2x.jpg 2x
+                  "
+                />
+                <source
+                  media="screen and
+                (max-width: 1200px)"
+                  srcset="
+                    images/team/john-doe-memeber-of-our-team-4-tablet-1x.jpg,
+                    images/team/john-doe-memeber-of-our-team-4-tablet-2x.jpg 2x
+                  "
+                />
+                <source
+                  srcset="
+                    images/team/john-doe-memeber-of-our-team-4-desktop-1x.jpg,
+                    images/team/john-doe-memeber-of-our-team-4-desktop-2x.jpg 2x
+                  "
+                />
+                <img
+                  class="team__img-default"
+                  src="images/john-doe-memeber-of-our-team-4.jpg"
+                  alt="our employee John Doe"
+                />
+              </picture>
               <h3 class="team__title">john doe</h3>
               <p class="team__subtitle">ui designer</p>
               <ul class="team__icons">
-                <li class="team__icon-item">
+                <li class="team__icon">
                   <a
                     href="https://www.instagram.com/"
                     target="_blank"
@@ -363,7 +476,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="team__icon-item">
+                <li class="team__icon">
                   <a
                     href="https://twitter.com/"
                     target="_blank"
@@ -374,7 +487,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="team__icon-item">
+                <li class="team__icon">
                   <a
                     href="https://facebook.com/"
                     target="_blank"
@@ -385,7 +498,7 @@
                     </svg>
                   </a>
                 </li>
-                <li class="team__icon-item">
+                <li class="team__icon">
                   <a
                     href="https://www.linkedin.com/"
                     target="_blank"
@@ -461,7 +574,7 @@
               ><span class="logo__primary-part">web</span>Studio</a
             >
             <address>
-              <ul class="footer__contact">
+              <ul class="footer__contact-items">
                 <li class="footer__contact-item">
                   <a
                     class="footer__contact-link footer__contact-link--location"
@@ -638,6 +751,83 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script>
+    <!-- mobile menu -->
+    <div class="mobile js-menu-container" id="mobile-menu">
+      <svg class="mobile__close-svg js-close-menu" width="40" height="40">
+        <use href="images/icons.svg#icon-close"></use>
+      </svg>
+      <nav class="mobile__nav">
+        <ul class="mobile__menu">
+          <li class="mobile__menu-item">
+            <a
+              class="mobile__menu-link mobile__menu-link--active"
+              href="index.html"
+              >agencja</a
+            >
+          </li>
+          <li class="mobile__menu-item">
+            <a class="mobile__menu-link" href="portfolio.html">portfolio</a>
+          </li>
+          <li class="mobile__menu-item">
+            <a class="mobile__menu-link" href="#">kontakt</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="mobile__contact">
+        <li class="mobile__contact-item">
+          <a class="mobile__contact-link" href="tel:+48111111111">
+            +48 111 111 111</a
+          >
+        </li>
+        <li class="mobile__contact-item">
+          <a class="mobile__contact-link" href="mailto:info@devstudio.com">
+            info@devstudio.com</a
+          >
+        </li>
+      </ul>
+      <ul class="mobile__socials">
+        <li class="mobile__social">
+          <a
+            class="mobile__social-link"
+            href="https://www.instagram.com/"
+            target="_blank"
+            >instagram</a
+          >
+        </li>
+        <li class="mobile__social">
+          <a
+            class="mobile__social-link"
+            href="https://twitter.com/"
+            target="_blank"
+            >twitter</a
+          >
+        </li>
+        <li class="mobile__social">
+          <a
+            class="mobile__social-link"
+            href="https://www.facebook.com/"
+            target="_blank"
+            >facebook</a
+          >
+        </li>
+        <li class="mobile__social">
+          <a
+            class="mobile__social-link"
+            href="https://www.linkedin.com"
+            target="_blank"
+            >linkedin</a
+          >
+        </li>
+      </ul>
+    </div>
+    <!-- mobile menu -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

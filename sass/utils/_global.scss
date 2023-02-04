@@ -7,16 +7,31 @@ body {
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
 ul {
   list-style: none;
 }
 .container {
-  max-width: 1200px;
+  width: 100%;
+  max-width: 480px;
   margin: 0 auto;
+  padding: 0 15px;
+  @include tablet {
+    max-width: 768px;
+  }
+  @include desktop {
+    max-width: 1200px;
+  }
 }
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
+  @include tablet {
+    padding: 60px 0;
+  }
+  @include desktop {
+    padding: 94px 0;
+  }
 }
 .uppercase {
   text-transform: uppercase;

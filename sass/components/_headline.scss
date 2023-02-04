@@ -6,25 +6,22 @@
       rgba(47, 48, 58, 0.4) 0%,
       rgba(47, 48, 58, 0.4) 50%
     ),
-    url(../images/working-designers-team.jpg);
+    url(../images/working-designers-team-mobile-1x.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  max-width: 1600px;
-  margin: 0 auto;
+  // max-height: 400px;
+  // max-width: 100vw;
   &__title {
-    font-size: 44px;
-    font-weight: 900;
-    line-height: 1.36;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
     color: $primaryColor;
-    margin-top: 106px;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.61;
+    letter-spacing: 0.06em;
+    margin-bottom: 30px;
   }
   &__button {
-    max-width: 200px;
-    margin-top: 30px;
-    margin-bottom: 106px;
     padding: 10px 42px 10px 41px;
     border: none;
     border-radius: 4px;
@@ -33,11 +30,34 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
-    &:hover {
-      cursor: pointer;
+    &::first-letter {
+      text-transform: uppercase;
     }
   }
-  &__button::first-letter {
-    text-transform: uppercase;
+  @include tablet {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 50%
+      ),
+      url(../images/working-designers-team-tablet-1x.jpg);
+    &__wrapper {
+      padding: 118px 186px;
+    }
+  }
+  @include desktop {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 50%
+      ),
+      url(../images/working-designers-team-desktop.jpg);
+    &__wrapper {
+      padding: 200px 0;
+    }
+    &__title {
+      font-size: 44px;
+      line-height: 1.36;
+    }
   }
 }
