@@ -16,9 +16,6 @@
     margin-top: 20px;
     font-style: normal;
   }
-  &__contact-link {
-    text-decoration: none;
-  }
   &__contact-link,
   &__contact-item &__contact-link--location {
     color: $primaryColor;
@@ -172,7 +169,6 @@
     &__form {
       position: static;
       margin-top: -30px;
-      // margin-top: 72px;
     }
     &__newsletter {
       flex-direction: row;

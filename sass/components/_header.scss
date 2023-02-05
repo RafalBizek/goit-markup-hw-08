@@ -69,7 +69,6 @@
       display: flex;
       align-items: center;
       transition: $transition-nav;
-      text-decoration: none;
       &:hover,
       &:focus {
         color: $accentColor;
@@ -93,7 +92,7 @@
       border-radius: 2px;
       background-color: $accentColor;
       position: absolute;
-      top: 48px;
+      top: 49px;
     }
   }
   @include desktop {
@@ -113,6 +112,10 @@
     }
     &__contact-link {
       font-size: 14px;
+    }
+    //nav element active
+    &__menu-link--active::after {
+      top: 47px;
     }
   }
 }
