@@ -1,6 +1,10 @@
 .header {
   width: 100%;
   position: relative;
+  //bottom border for header
+    &--border {
+      border-bottom: 1px solid $borderNavColor;
+    }
   &__menu,
   &__contact {
     display: none;
@@ -78,10 +82,6 @@
       margin-right: 8px;
       --color2: currentColor;
       fill: var(--color2);
-    }
-    //bottom border for header
-    &--border {
-      border-bottom: 1px solid $borderNavColor;
     }
     //nav element active
     &__menu-link--active::after {
