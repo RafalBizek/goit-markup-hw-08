@@ -14,7 +14,12 @@
       box-shadow: 0px 4px 4px $shadowColor;
     }
   }
-  &__image {
+  &__images {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  &__img-default {
     width: 100%;
     height: auto;
     display: block;
@@ -70,6 +75,10 @@
     min-width: 768px;
     &__img {
       flex-basis: calc((100% - $spaceGap) / 2);
+    }
+    &__overlay {
+      min-height: 306px;
+      transform: translateY(104%);
     }
   }
   @include desktop {
