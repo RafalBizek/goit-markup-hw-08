@@ -8,6 +8,7 @@
   width: 100%;
   height: 100%;
   background-color: $bgBackdrop;
+  overflow: auto;
 }
 .modal {
   position: relative;
@@ -49,7 +50,7 @@
     cursor: pointer;
     fill: $accentColor;
   }
-   @include tablet {
+  @include tablet {
     right: 8px;
   }
 }
