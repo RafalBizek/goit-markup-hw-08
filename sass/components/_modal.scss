@@ -11,6 +11,7 @@
   overflow: auto;
 }
 .modal {
+  margin-top: 300px;
   position: relative;
   width: 450px;
   min-height: 609px;
@@ -50,7 +51,7 @@
     cursor: pointer;
     fill: $accentColor;
   }
-  @include tablet {
+   @include tablet {
     right: 8px;
   }
 }
