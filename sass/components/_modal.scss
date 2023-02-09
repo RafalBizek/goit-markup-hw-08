@@ -21,6 +21,7 @@
   @include desktop {
     width: 528px;
     min-height: 581px;
+    margin-top: 0;
   }
 }
 @keyframes modal-open {
