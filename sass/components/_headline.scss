@@ -61,36 +61,36 @@
     }
   }
 }
-// @media (min-device-pixel-ratio: 2),
-//   (min-resolution: 192dpi),
-//   (min-resolution: 2dppx) {
-//   .headline {
-//     background-image: linear-gradient(
-//         to bottom,
-//         rgba(47, 48, 58, 0.4) 0%,
-//         rgba(47, 48, 58, 0.4) 50%
-//       ),
-//       url(../images/working-designers-team-mobile@2x.jpg);
-// }
-// @media (min-device-pixel-ratio: 2),
-//   (min-resolution: 192dpi),
-//   (min-resolution: 2dppx) {
-//   .headline {
-//     background-image: linear-gradient(
-//         to bottom,
-//         rgba(47, 48, 58, 0.4) 0%,
-//         rgba(47, 48, 58, 0.4) 50%
-//       ),
-//       url(../images/working-designers-team-tablet-2x.jpg);
-// }
-// @media (min-device-pixel-ratio: 2),
-//   (min-resolution: 192dpi),
-//   (min-resolution: 2dppx) {
-//   .headline {
-//     background-image: linear-gradient(
-//         to bottom,
-//         rgba(47, 48, 58, 0.4) 0%,
-//         rgba(47, 48, 58, 0.4) 50%
-//       ),
-//       url(../images/working-designers-team-desktop-2x.jpg);
-// }
+@media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .headline {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(47, 48, 58, 0.4) 0%,
+        rgba(47, 48, 58, 0.4) 50%
+      ),
+      url(../images/working-designers-team-mobile@2x.jpg);
+  }
+  @include tablet {
+    .headline {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(47, 48, 58, 0.4) 0%,
+          rgba(47, 48, 58, 0.4) 50%
+        ),
+        url(../images/working-designers-team-tablet@2x.jpg);
+    }
+  }
+  @include desktop {
+    .headline {
+      background-image: linear-gradient(
+          to bottom,
+          rgba(47, 48, 58, 0.4) 0%,
+          rgba(47, 48, 58, 0.4) 50%
+        ),
+        url(../images/working-designers-team-desktop@2x.jpg);
+    }
+  }
+}
+
